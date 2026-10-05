@@ -1,0 +1,67 @@
+{
+  "name": "wolf",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Wolf: EU-compliant invoices, quotes and credit notes for freelancers. A desktop app with no account and no server.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.test.json",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "check": "npm run typecheck && npm run lint && npm run format:check && npm test && npm run build",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build"
+  },
+  "dependencies": {
+    "@fontsource/ibm-plex-mono": "^5.1.1",
+    "@fontsource/ibm-plex-sans": "^5.1.1",
+    "@react-pdf/renderer": "^4.6.0",
+    "@tauri-apps/api": "^2.12.1",
+    "@tauri-apps/plugin-fs": "^2.6.0",
+    "@tauri-apps/plugin-opener": "^2.7.0",
+    "idb-keyval": "^6.2.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "@playwright/test": "^1.63.0",
+    "@tauri-apps/cli": "^2.12.1",
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.7",
+    "@types/node": "^26.6.4",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.39.5",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.13.0",
+    "jsdom": "^29.1.1",
+    "pdfjs-dist": "^6.4.299",
+    "prettier": "^3.9.9",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.71.0",
+    "vite": "^6.0.3",
+    "vitest": "^5.0.3"
+  },
+  "license": "MIT",
+  "author": "Gabriel Jukema",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GabrielsProjectskis/wolf"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

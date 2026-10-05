@@ -1,0 +1,10 @@
+dist
+node_modules
+src-tauri/target
+src-tauri/gen
+package-lock.json
+tests/pdf/out
+playwright-report
+test-results
+public/fonts
+src-tauri/icons

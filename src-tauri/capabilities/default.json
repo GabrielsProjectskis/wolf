@@ -1,0 +1,123 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Least privilege: Wolf may read and write inside Documents/Wolf (data, backups, PDFs), reveal a file it wrote, and close its own window. Nothing else on disk, no shell, no network.",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "core:window:allow-destroy",
+    {
+      "identifier": "fs:allow-exists",
+      "allow": [
+        {
+          "path": "$DOCUMENT/Wolf"
+        },
+        {
+          "path": "$DOCUMENT/Wolf/backups"
+        },
+        {
+          "path": "$DOCUMENT/Wolf/pdf"
+        },
+        {
+          "path": "$DOCUMENT/Wolf/*"
+        },
+        {
+          "path": "$DOCUMENT/Wolf/backups/*"
+        },
+        {
+          "path": "$DOCUMENT/Wolf/pdf/*"
+        }
+      ]
+    },
+    {
+      "identifier": "fs:allow-mkdir",
+      "allow": [
+        {
+          "path": "$DOCUMENT/Wolf"
+        },
+        {
+          "path": "$DOCUMENT/Wolf/backups"
+        },
+        {
+          "path": "$DOCUMENT/Wolf/pdf"
+        }
+      ]
+    },
+    {
+      "identifier": "fs:allow-read-dir",
+      "allow": [
+        {
+          "path": "$DOCUMENT/Wolf"
+        },
+        {
+          "path": "$DOCUMENT/Wolf/backups"
+        },
+        {
+          "path": "$DOCUMENT/Wolf/pdf"
+        }
+      ]
+    },
+    {
+      "identifier": "fs:allow-read-text-file",
+      "allow": [
+        {
+          "path": "$DOCUMENT/Wolf/*"
+        },
+        {
+          "path": "$DOCUMENT/Wolf/backups/*"
+        },
+        {
+          "path": "$DOCUMENT/Wolf/pdf/*"
+        }
+      ]
+    },
+    {
+      "identifier": "fs:allow-write-text-file",
+      "allow": [
+        {
+          "path": "$DOCUMENT/Wolf/*"
+        },
+        {
+          "path": "$DOCUMENT/Wolf/backups/*"
+        },
+        {
+          "path": "$DOCUMENT/Wolf/pdf/*"
+        }
+      ]
+    },
+    {
+      "identifier": "fs:allow-write-file",
+      "allow": [
+        {
+          "path": "$DOCUMENT/Wolf/pdf/*"
+        }
+      ]
+    },
+    {
+      "identifier": "fs:allow-rename",
+      "allow": [
+        {
+          "path": "$DOCUMENT/Wolf/*"
+        },
+        {
+          "path": "$DOCUMENT/Wolf/backups/*"
+        },
+        {
+          "path": "$DOCUMENT/Wolf/pdf/*"
+        }
+      ]
+    },
+    {
+      "identifier": "fs:allow-remove",
+      "allow": [
+        {
+          "path": "$DOCUMENT/Wolf/data.json.bak"
+        },
+        {
+          "path": "$DOCUMENT/Wolf/backups/*"
+        }
+      ]
+    },
+    "opener:allow-reveal-item-in-dir"
+  ]
+}
