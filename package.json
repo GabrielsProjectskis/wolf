@@ -23,7 +23,7 @@
   "dependencies": {
     "@fontsource/ibm-plex-mono": "^5.1.1",
     "@fontsource/ibm-plex-sans": "^5.1.1",
-    "@react-pdf/renderer": "^4.6.0",
+    "@react-pdf/renderer": "^4.9.0",
     "@tauri-apps/api": "^2.12.1",
     "@tauri-apps/plugin-fs": "^2.6.0",
     "@tauri-apps/plugin-opener": "^2.7.0",
